@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #127ae3;
+}
+
+
+.hero-wrapper {
+  background: linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)),
+              url('Images/Finance.jpg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);  
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.top-header .left i {
+  margin-right: 8px;
+}
+
+.top-header .right a,
+.top-header .right span {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-header .right i {
+  margin-right: 5px;
+}
+
+.cart-count {
+  background: green;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  color: white;
+  vertical-align: top;
+  margin-left: 4px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.logo img {
+  height: 70px;
+}
+
+nav .menu {
+  list-style: none;
+  display: flex;
+  margin-right: 30px;
+  gap: 30px;
+}
+
+nav .menu li {
+  position: relative;
+  text-decoration: none;
+}
+
+nav .menu li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+nav .menu li a:hover {
+  color: #0077cc;
+}
+
+
+nav .menu li .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  list-style: none;
+  border-radius: 4px;
+}
+
+nav .menu li .dropdown-content.show {
+  display: block;
+}
+
+nav .menu li .dropdown-content li {
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+nav .menu li .dropdown-content li a {
+  color: #333;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav .menu li .dropdown-content li a:hover {
+  background-color: #f0f0f0; 
+  color: #0077cc;           
+}
+
+nav .menu li:hover .dropdown-content {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 40px 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.hero .btn {
+  margin-top: 30px;
+  background-color: #00c853;
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #00b34d;
+}
+
+@media (max-width: 768px) {
+  header,
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  nav .menu {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 1s ease-in-out;
+}
+
+.accountant-help {
+  padding: 80px 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.light-text {
+  color: #555;
+  margin: 0 4px;
+}
+
+.highlight-text {
+  color: #127ae3;
+}
+
+.section-desc {
+  color: #444;
+  font-size: 14px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-small {
+  background-color: #127ae3;
+  color: #fff;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-small:hover {
+  background-color: #005bb5;
+}
