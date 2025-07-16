@@ -31,19 +31,19 @@
 const slides = [
   {
     title: "FINANCIAL SERVICES",
-    desc: "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence.",
+    desc: "Carefully manage financial markets using ready-to-use financial systems. Actively work with customers after their investments earn profits. Clearly understand and show how customer needs are shaping financial services.",
     btn: "LEARN MORE",
     bg: "Images/Finance.jpg"
   },
   {
     title: "ACCOUNTING SERVICES",
-    desc: "Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions.",
+    desc: "Share information across different platforms, even if it doesn’t add extra value. Deliver results quickly and on time for live systems. Strongly support both online and offline business solutions.",
     btn: "LEARN MORE",
     bg: "Images/Accounting.jpg"
   },
   {
     title: "YOU CAN FOCUS ON WHAT YOU DO BEST",
-    desc: "Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling.",
+    desc: "Work together effectively in specialized markets where resources are limited. Provide personalized customer service with strong, creative ideas. Continuously improve how resources are managed and balanced.",
     btn: "GET STARTED",
     bg: "Images/Focus.jpg"
   }
