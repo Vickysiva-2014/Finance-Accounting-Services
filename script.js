@@ -1,33 +1,34 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        
-        document.querySelectorAll('.dropdown-content').forEach(drop => {
-          if (drop !== this.nextElementSibling) {
-            drop.classList.remove('show');
-          }
-        });
-
-  
-        const dropdown = this.nextElementSibling;
-        dropdown.classList.toggle('show');
-      });
-    });
-
-   
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-content').forEach(drop => {
+      // Close other dropdowns
+      document.querySelectorAll('.dropdown-content').forEach(drop => {
+        if (drop !== this.nextElementSibling) {
           drop.classList.remove('show');
-        });
-      }
+        }
+      });
+
+      // Toggle current dropdown
+      const dropdown = this.nextElementSibling;
+      dropdown.classList.toggle('show');
     });
   });
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(drop => {
+        drop.classList.remove('show');
+      });
+    }
+  });
+});
+
+// Hero Slider
 const slides = [
   {
     title: "FINANCIAL SERVICES",
@@ -56,12 +57,10 @@ const content = document.getElementById("heroContent");
 function updateHero() {
   const slide = slides[index];
 
-
   hero.style.background = `linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)), url('${slide.bg}') no-repeat center center / cover`;
 
-
   content.classList.remove("fade-in");
-  void content.offsetWidth;
+  void content.offsetWidth; // trigger reflow
   content.innerHTML = `
     <h1>${slide.title}</h1>
     <p>${slide.desc}</p>
@@ -74,3 +73,31 @@ function updateHero() {
 
 updateHero();
 setInterval(updateHero, 5000);
+
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+let current = 0;
+
+function showTestimonial(index) {
+  testimonials.forEach((t, i) => {
+    t.classList.remove("active");
+    dots[i].classList.remove("active");
+  });
+  testimonials[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+// Auto-slide every 6 seconds
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 6000);
+
+// Dot navigation
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    current = i;
+    showTestimonial(current);
+  });
+});
+
