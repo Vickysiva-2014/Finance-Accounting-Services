@@ -583,7 +583,6 @@ nav .menu li:hover .dropdown-content {
   font-size: 14px;
 }
 
-/* Slider container */
 .testimonial-slider {
   display: flex;
   justify-content: center;
@@ -594,7 +593,6 @@ nav .menu li:hover .dropdown-content {
   overflow: hidden;
 }
 
-/* Testimonial card */
 .testimonial {
   width: 100%;
   max-width: 600px;
@@ -1028,11 +1026,11 @@ nav .menu li:hover .dropdown-content {
 
 .info-boxes .box {
   flex: 1;
-  background-color: #1871d1; /* Blue Background */
-  color: #fff; /* White Text */
+  background-color: #1871d1;
+  color: #fff;
   text-align: center;
   padding: 10px 10px;
-  border-right: 1px solid rgba(82, 70, 120, 0.8); /* Line shadow effect */
+  border-right: 1px solid rgba(82, 70, 120, 0.8);
 }
 
 .info-boxes .box:last-child {
@@ -1059,7 +1057,6 @@ nav .menu li:hover .dropdown-content {
 }
 
 
-/* Footer Styling */
 .footer {
   background-color: #444;
   color: #fff;
@@ -1172,7 +1169,7 @@ nav .menu li:hover .dropdown-content {
 }
 
 
-/* Responsive Design for Info Boxes & Footer */
+
 @media screen and (max-width: 768px) {
   .info-boxes {
     flex-direction: column;
@@ -1244,9 +1241,160 @@ nav .menu li:hover .dropdown-content {
   }
 }
 
+/* About */
+#aboutHero {
+  position: relative;
+  color: white;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
+#aboutHero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(4, 33, 61, 0.8);
+  z-index: 1;
+}
 
+#aboutHeroContent {
+  position: relative;
+  z-index: 2;
+}
 
+#aboutHeroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#aboutHeroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+#aboutHeroContent .btn {
+  padding: 12px 24px;
+  background-color: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-wrapper2 {
+  background: linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)),
+              url('Images/AboutBanner.jpg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);  
+}
+
+.about-section {
+  padding: 80px 20px;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.about-title .about-highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.about-desc {
+  text-align: center;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto 50px;
+  font-size: 1.0rem;
+  line-height: 1.6;
+}
+
+.about-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.about-box {
+  background: #fff;
+  display: flex;
+  flex: 1 1 30%;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+.about-number {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  color: white;
+}
+
+.about-number.orange {
+  background-color: orange;
+}
+
+.about-number.blue {
+  background-color: #007bff;
+}
+
+.about-number.green {
+  background-color: #28a745;
+}
+
+.about-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0d315f;
+}
+
+.about-content p {
+  margin: 0;
+   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.about-hr {
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 20px auto;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.5);
+}
 
 
 
