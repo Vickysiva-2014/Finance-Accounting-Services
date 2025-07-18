@@ -101,3 +101,35 @@ dots.forEach((dot, i) => {
   });
 });
 
+const revealCards = document.querySelectorAll('.card.reveal');
+
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    revealCards.forEach((card, i) => {
+      const cardTop = card.getBoundingClientRect().top;
+
+      if (cardTop < triggerBottom) {
+        setTimeout(() => {
+          card.classList.add('active');
+        }, i * 200); // delay each card
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.querySelector('.menu').classList.toggle('show');
+  });
+
+  const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const dropdown = this.nextElementSibling;
+      dropdown.classList.toggle('show');
+    });
+  });
+
