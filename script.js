@@ -5,20 +5,20 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
 
-      // Close other dropdowns
+ 
       document.querySelectorAll('.dropdown-content').forEach(drop => {
         if (drop !== this.nextElementSibling) {
           drop.classList.remove('show');
         }
       });
 
-      // Toggle current dropdown
+
       const dropdown = this.nextElementSibling;
       dropdown.classList.toggle('show');
     });
   });
 
-  // Close dropdowns on outside click
+
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.dropdown')) {
       document.querySelectorAll('.dropdown-content').forEach(drop => {
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Hero Slider
 const slides = [
   {
     title: "FINANCIAL SERVICES",
@@ -60,7 +59,7 @@ function updateHero() {
   hero.style.background = `linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)), url('${slide.bg}') no-repeat center center / cover`;
 
   content.classList.remove("fade-in");
-  void content.offsetWidth; // trigger reflow
+  void content.offsetWidth;
   content.innerHTML = `
     <h1>${slide.title}</h1>
     <p>${slide.desc}</p>
@@ -87,13 +86,13 @@ function showTestimonial(index) {
   dots[index].classList.add("active");
 }
 
-// Auto-slide every 6 seconds
+
 setInterval(() => {
   current = (current + 1) % testimonials.length;
   showTestimonial(current);
 }, 6000);
 
-// Dot navigation
+
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
     current = i;
@@ -112,7 +111,7 @@ const revealCards = document.querySelectorAll('.card.reveal');
       if (cardTop < triggerBottom) {
         setTimeout(() => {
           card.classList.add('active');
-        }, i * 200); // delay each card
+        }, i * 200); 
       }
     });
   }
