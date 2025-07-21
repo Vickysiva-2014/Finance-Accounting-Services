@@ -17,3 +17,12 @@ if (heroSection && contentDiv) {
     <p>${aboutHero.desc}</p>
   `;
 }
+
+document.querySelectorAll(".accordion-item").forEach(item => {
+    item.querySelector(".accordion-header").addEventListener("click", () => {
+      document.querySelectorAll(".accordion-item").forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+      item.classList.toggle("active");
+    });
+  });
