@@ -1,32 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+  const toggleButtons = document.querySelectorAll('.toggle-dropdown');
 
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
       e.preventDefault();
+      const dropdown = this.nextElementSibling;
 
- 
-      document.querySelectorAll('.dropdown-content').forEach(drop => {
-        if (drop !== this.nextElementSibling) {
-          drop.classList.remove('show');
+     
+      document.querySelectorAll('.dropdown-content').forEach(menu => {
+        if (menu !== dropdown) {
+          menu.classList.remove('show');
         }
       });
 
-
-      const dropdown = this.nextElementSibling;
+    
       dropdown.classList.toggle('show');
     });
   });
 
-
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-content').forEach(drop => {
-        drop.classList.remove('show');
+      document.querySelectorAll('.dropdown-content').forEach(menu => {
+        menu.classList.remove('show');
       });
     }
   });
 });
+
+
 
 const slides = [
   {
@@ -116,19 +117,16 @@ const revealCards = document.querySelectorAll('.card.reveal');
     });
   }
 
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-
-  document.getElementById('menu-toggle').addEventListener('click', function () {
-    document.querySelector('.menu').classList.toggle('show');
-  });
-
-  const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      const dropdown = this.nextElementSibling;
-      dropdown.classList.toggle('show');
-    });
-  });
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.innerWidth > 768) {
+    if (window.scrollY > 50) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  } else {
+    header.classList.remove("fixed");
+  }
+});
 
