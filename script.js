@@ -117,6 +117,9 @@ const revealCards = document.querySelectorAll('.card.reveal');
     });
   }
 
+    window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+
 window.addEventListener("scroll", function () {
   const header = document.getElementById("main-header");
   if (window.innerWidth > 768) {
