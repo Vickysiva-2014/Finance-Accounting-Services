@@ -64,7 +64,7 @@ function updateHero() {
   content.innerHTML = `
     <h1>${slide.title}</h1>
     <p>${slide.desc}</p>
-    <a href="#" class="btn">${slide.btn}</a>
+    <a href="service.html" class="btn">${slide.btn}</a>
   `;
   content.classList.add("fade-in");
 

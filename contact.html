@@ -11,7 +11,6 @@
 <body>
   <div class="hero-wrapper7" id="hero">
 
-    <!-- Top Header -->
     <div class="top-header">
   <div class="left">
     <i class="fas fa-phone-alt"></i> 123456789
@@ -51,17 +50,14 @@
 </header>
 
 
-    <!-- Hero Section -->
     <section class="hero" id="contactHero">
       <div class="overlay"></div>
       <div class="hero-content" id="contactHeroContent">
-        <!-- Injected via JS -->
       </div>
     </section>
   </div>
 <div class="contact-container">
     
-    <!-- Contact Info Cards -->
     <div class="contact-cards">
       <div class="contact-card">
         <i class="fas fa-envelope contact-icon"></i>
@@ -85,45 +81,43 @@
       </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="contact-form-section">
   <h2>SEND US A <span>MESSAGE</span></h2>
   <div class="contact-divider"></div>
 
-  <form class="contact-form contact-grid-layout">
-    
-    <!-- Left Side: Name, Email, Phone -->
-    <div class="contact-form-left">
-      <div class="contact-form-group">
-        <label for="name">Name:*</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-
-      <div class="contact-form-group">
-        <label for="email">Email:*</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-
-      <div class="contact-form-group">
-        <label for="phone">Phone Number:*</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
+  <form class="contact-form contact-grid-layout" id="contactForm">
+  <div class="contact-form-left">
+    <div class="contact-form-group">
+      <label for="name">Name:*</label>
+      <input type="text" id="name" name="name" required />
     </div>
 
-    <!-- Right Side: Message -->
-    <div class="contact-form-right">
-      <div class="contact-form-group">
-        <label for="message">Message:*</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
+    <div class="contact-form-group">
+      <label for="email">Email:*</label>
+      <input type="email" id="email" name="email" required />
     </div>
 
-    <!-- Full Width Button -->
-    <div class="contact-form-group contact-full-width">
-      <button type="submit">Send</button>
+    <div class="contact-form-group">
+      <label for="phone">Phone Number:*</label>
+      <input type="tel" id="phone" name="phone" required />
     </div>
+  </div>
 
-  </form>
+  <div class="contact-form-right">
+    <div class="contact-form-group">
+      <label for="message">Message:*</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+  </div>
+
+  <div class="contact-form-group contact-full-width">
+    <button type="submit">Send</button>
+    <p id="successMsg" style="color: green; display: none; margin-top: 10px;">
+      Your request was submitted successfully!
+    </p>
+  </div>
+</form>
+
 </div>
 
   </div>
@@ -150,7 +144,6 @@
 </section>
 
 
-<!-- Footer Section -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-box about">
@@ -194,7 +187,9 @@
       <h3>NEWSLETTER</h3>
       <p>Enter your e-mail and subscribe to our newsletter</p>
       <input type="email" placeholder="E-mail">
+      <a href="https://mail.google.com/">
       <button>SUBSCRIBE</button>
+      </a>
     </div>
   </div>
 

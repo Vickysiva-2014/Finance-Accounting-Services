@@ -25,7 +25,6 @@ const signInBtn = document.getElementById('signIn');
 const forgotPass = document.querySelector('.forgot-pass');
 const backToSignIn = document.getElementById('backToSignIn');
 
-// Switching panels logic
 signUpBtn.addEventListener('click', () => {
   container.classList.remove("forgot-active");
   container.classList.add("right-panel-active");
@@ -46,7 +45,7 @@ backToSignIn?.addEventListener('click', () => {
   container.classList.remove("forgot-active");
 });
 
-// Handle Sign Up
+
 document.getElementById('signUpForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -54,14 +53,13 @@ document.getElementById('signUpForm').addEventListener('submit', (e) => {
   const email = e.target.elements['signupEmail'].value;
   const password = e.target.elements['signupPassword'].value;
 
-  // Save data to localStorage (simulating registration)
   localStorage.setItem('user', JSON.stringify({ name, email, password }));
 
-  // Show success message
+
   const message = document.getElementById('signUpMessage');
   message.textContent = "✅ Registered successfully!";
   
-  // Reset the form
+  
   e.target.reset();
 
    setTimeout(() => {
@@ -71,7 +69,6 @@ document.getElementById('signUpForm').addEventListener('submit', (e) => {
 
 
 
-// Handle Sign In
 document.getElementById('signInForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -99,15 +96,13 @@ document.getElementById('signInForm').addEventListener('submit', (e) => {
     message.style.color = 'red';
   }
 
-  e.target.reset(); // Clear inputs
+  e.target.reset();
 
   setTimeout(() => {
       message.textContent = '';
     }, 10000);
 });
 
-
-// Handle Forgot Password
 
 document.addEventListener('DOMContentLoaded', () => {
   const forgotForm = document.getElementById('forgotForm');
@@ -122,21 +117,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const storedUser = JSON.parse(localStorage.getItem('user'));
 
-    // Check email match
     if (!storedUser || storedUser.email !== email) {
       resetMessage.textContent = '❌ Email is not registered.';
       resetMessage.style.color = 'red';
       return;
     }
 
-    // Check password match
     if (newPassword !== confirmPassword) {
       resetMessage.textContent = '❌ Passwords do not match.';
       resetMessage.style.color = 'red';
       return;
     }
 
-    // Update password
     storedUser.password = newPassword;
     localStorage.setItem('user', JSON.stringify(storedUser));
     resetMessage.textContent = '✅ Password updated successfully!';
@@ -158,19 +150,16 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const dropdown = this.nextElementSibling;
 
-      // Close other dropdowns
       document.querySelectorAll('.dropdown-content').forEach(menu => {
         if (menu !== dropdown) {
           menu.classList.remove('show');
         }
       });
 
-      // Toggle current
       dropdown.classList.toggle('show');
     });
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.dropdown')) {
       document.querySelectorAll('.dropdown-content').forEach(menu => {
@@ -182,16 +171,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-window.addEventListener('scroll', function () {
-    const mainHeader = document.getElementById('main-header');
-    
-    // When page is scrolled more than 1px
-    if (window.scrollY > 1) {
-      mainHeader.classList.add('fixed');
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.innerWidth > 768) {
+    if (window.scrollY > 50) {
+      header.classList.add("fixed");
     } else {
-      mainHeader.classList.remove('fixed');
+      header.classList.remove("fixed");
     }
-  });
+  } else {
+    header.classList.remove("fixed");
+  }
+});
 
 
 

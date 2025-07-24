@@ -9,6 +9,7 @@ body {
   background-color: white;
 }
 
+/* Home */
 .hero-wrapper {
   background: linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)),
               url('Images/Finance.jpg') no-repeat center center/cover;
@@ -108,7 +109,6 @@ nav .menu li a:hover {
   color: #0077cc;
 }
 
-/* Dropdown styles */
 nav .dropdown-content {
   display: none;
   position: absolute;
@@ -159,7 +159,7 @@ nav .dropdown-content li a:hover {
   margin-left: 20px;
 }
 
-/* Common Button Style */
+
 .btn {
   display: flex;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -180,7 +180,7 @@ nav .dropdown-content li a:hover {
   line-height: 1;
 }
 
-/* Sign Up Button */
+
 .btn.signup {
   background-color: #2fff8d;
   margin-right:20px ;
@@ -212,7 +212,7 @@ nav .dropdown-content li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px; /* Shift slightly to the left */
+    margin-left: 10px;
     margin-top: 15px;
     width: 90%;
     max-width: 220px;
@@ -727,7 +727,6 @@ nav .dropdown-content li a:hover {
   cursor: default;
 }
 
-/* Dots Navigation */
 .dots {
   margin-top: 30px;
 }
@@ -1353,7 +1352,9 @@ nav .dropdown-content li a:hover {
   }
 }
 
+
 /* About */
+
 #aboutHero {
   position: relative;
   color: white;
@@ -1774,7 +1775,7 @@ nav .dropdown-content li a:hover {
 }
 
 .section-heading .highlight {
-  color: #2196f3; /* Blue highlight */
+  color: #2196f3;
 }
 
 .section-description {
@@ -1783,7 +1784,6 @@ nav .dropdown-content li a:hover {
   line-height: 1.8;
 }
 
-/* Common Section Styles */
 .service-section {
   padding: 80px 0;
 }
@@ -1856,9 +1856,76 @@ nav .dropdown-content li a:hover {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  #serviceHero {
+    height: 150px;
+    padding: 20px;
+  }
+
+  #serviceHeroContent h1 {
+    font-size: 2rem;
+  }
+
+  #serviceHeroContent p {
+    font-size: 1rem;
+  }
+
+  .header-description-section {
+    padding: 40px 15px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .service-section {
+    padding: 40px 20px;
+  }
+
+  .service-section.white {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .text {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .text p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .image1 {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .image1 img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+
 
 /* FAQ */
-
 #faqHero {
   position: relative;
   color: white;
@@ -2002,8 +2069,8 @@ nav .dropdown-content li a:hover {
   font-size: 14px;
 }
 
-
 /* 404 */
+
 #notFoundHero {
   position: relative;
   color: white;
@@ -2063,7 +2130,7 @@ nav .dropdown-content li a:hover {
 .error-container h1 {
   font-size: 60px;
   text-align: center;
-  color: #2ecc71; /* Green */
+  color: #2ecc71;
   margin-bottom: 10px;
 }
 
@@ -2081,7 +2148,8 @@ nav .dropdown-content li a:hover {
   color: #777;
   text-align: center;
 }
-/* blogs */
+
+/* Blogs */
 
 #blogsHero {
   position: relative;
@@ -2276,7 +2344,77 @@ nav .dropdown-content li a:hover {
   color: #fff;
 }
 
-/* Contact */
+@media (max-width: 768px) {
+  #blogsHero {
+    height: 150px;
+    padding: 20px;
+  }
+
+  #blogsHeroContent h1 {
+    font-size: 2rem;
+  }
+
+  #blogsHeroContent p {
+    font-size: 1rem;
+  }
+
+  .blog-container {
+    flex-direction: column;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .blog-main {
+    flex: 1;
+    gap: 20px;
+  }
+
+  .blog-post img,
+  .blog-post iframe {
+    max-height: 250px;
+  }
+
+  .blog-post h2 {
+    font-size: 1.4rem;
+  }
+
+  .blog-post .excerpt {
+    font-size: 0.95rem;
+  }
+
+  .blog-sidebar {
+    flex: 1;
+    width: 100%;
+  }
+
+  .sidebar-section {
+    padding: 15px;
+  }
+
+  .sidebar-section h3 {
+    font-size: 1rem;
+  }
+
+  .sidebar-section input[type="text"] {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .pagination {
+    justify-content: center;
+    margin: 20px auto 0;
+  }
+
+  .pagination a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .tags a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
 
 #contactHero {
   position: relative;
@@ -2322,7 +2460,6 @@ nav .dropdown-content li a:hover {
   padding: 0 20px;
 }
 
-/* --- Contact Cards --- */
 .contact-cards {
   display: flex;
   flex-wrap: wrap;
@@ -2376,7 +2513,6 @@ nav .dropdown-content li a:hover {
   font-size: 14px;
 }
 
-/* --- Contact Form Section --- */
 .contact-form-section {
   text-align: center;
 }
@@ -2397,7 +2533,7 @@ nav .dropdown-content li a:hover {
   margin: 10px auto 40px;
 }
 
-/* --- Form Styles --- */
+
 .contact-grid-layout {
   display: flex;
   flex-wrap: wrap;
@@ -2405,7 +2541,6 @@ nav .dropdown-content li a:hover {
   justify-content: center;
 }
 
-/* Left column: 3 stacked fields */
 .contact-form-left {
   flex: 1 1 48%;
   display: flex;
@@ -2413,14 +2548,13 @@ nav .dropdown-content li a:hover {
   gap: 20px;
 }
 
-/* Right column: Message box */
+
 .contact-form-right {
   flex: 1 1 48%;
   display: flex;
   flex-direction: column;
 }
 
-/* Adjust individual form group */
 .contact-form-group {
   display: flex;
   flex-direction: column;
@@ -2445,7 +2579,6 @@ nav .dropdown-content li a:hover {
   resize: vertical;
 }
 
-/* Submit button full width */
 .contact-full-width {
   flex: 1 1 100%;
 }
@@ -2466,18 +2599,15 @@ nav .dropdown-content li a:hover {
   background-color: #217dbb;
 }
 
-/* Responsive Stack */
-@media (max-width: 768px) {
-  .contact-form-left,
-  .contact-form-right {
-    flex: 1 1 100%;
-  }
-}
 
-/* Responsive */
 @media (max-width: 768px) {
   .contact-cards {
     flex-direction: column;
+  }
+
+    .contact-form-left,
+  .contact-form-right {
+    flex: 1 1 100%;
   }
 
   .contact-form-group {
@@ -2496,7 +2626,6 @@ nav .dropdown-content li a:hover {
   color: white;
 }
 
-/* Signin */
 #signinHero {
   position: relative;
   color: white;
@@ -2607,8 +2736,8 @@ button:active {
 }
 
 button:hover {
-  background-color: #0a7b0a; /* lighter green on hover */
-  transform: scale(1.05);   /* slightly enlarge on hover */
+  background-color: #0a7b0a;
+  transform: scale(1.05);
 }
 
 button.ghost {

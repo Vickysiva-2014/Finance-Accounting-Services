@@ -26,19 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const dropdown = this.nextElementSibling;
 
-      // Close other dropdowns
       document.querySelectorAll('.dropdown-content').forEach(menu => {
         if (menu !== dropdown) {
           menu.classList.remove('show');
         }
       });
 
-      // Toggle current
       dropdown.classList.toggle('show');
     });
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.dropdown')) {
       document.querySelectorAll('.dropdown-content').forEach(menu => {
@@ -50,13 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-window.addEventListener('scroll', function () {
-    const mainHeader = document.getElementById('main-header');
-    
-    // When page is scrolled more than 1px
-    if (window.scrollY > 1) {
-      mainHeader.classList.add('fixed');
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.innerWidth > 768) {
+    if (window.scrollY > 50) {
+      header.classList.add("fixed");
     } else {
-      mainHeader.classList.remove('fixed');
+      header.classList.remove("fixed");
     }
-  });
+  } else {
+    header.classList.remove("fixed");
+  }
+});
