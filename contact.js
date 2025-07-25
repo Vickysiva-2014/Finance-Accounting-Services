@@ -78,3 +78,22 @@ const form = document.getElementById('contactForm');
       }, 5000);
     }
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById('darkModeToggle');
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", function () {
+    if (this.checked) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+    }
+  });
+});

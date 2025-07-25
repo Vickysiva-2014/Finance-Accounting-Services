@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Finance & Accounting Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dash-dashboard">
+
+    <!-- Sidebar -->
+    <div class="dash-sidebar">
+      <h2 class="dash-sidebar-title">FinAcc Dashboard</h2>
+      <hr Class ="dash-line">
+      <ul class="dash-nav-list">
+        <li><a href="Dashboard.html">Dashboard</a></li>
+        <!-- <li><a href="#">Invoices</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li> -->
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dash-main-content">
+
+      <div class="dash-header">
+        <h1 class="dash-header-title">Financial Overview</h1>
+        <div class="dash-header-actions">
+          <button class="dash-btn dash-btn-home" onclick="window.location.href='index.html'">Home</button>
+          <button class="dash-btn dash-btn-download" onclick="downloadReport()">Download Report</button>
+        </div>
+                 <div class="dark-toggle-wrapper">
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="dash-cards">
+        <div class="dash-card dash-card-green">
+          <h3>Total Revenue</h3>
+          <p>₹5,80,000</p>
+        </div>
+        <div class="dash-card dash-card-red">
+          <h3>Total Expenses</h3>
+          <p>₹3,20,000</p>
+        </div>
+        <div class="dash-card dash-card-blue">
+          <h3>Net Profit</h3>
+          <p>₹2,60,000</p>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="dash-charts">
+        <div class="dash-chart-box">
+          <h3>Income vs Expenses</h3>
+          <canvas id="incomeExpenseChart"></canvas>
+        </div>
+        <div class="dash-chart-box">
+          <h3>Monthly Revenue</h3>
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

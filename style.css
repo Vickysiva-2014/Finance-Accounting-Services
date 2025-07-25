@@ -45,16 +45,24 @@ body {
   margin-right: 8px;
 }
 
-.top-header .right a,
-.top-header .right span {
-  margin-left: 15px;
-  color: #fff;
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right a,
+.right span {
+  margin-right: 35px;
+  color: white;
   text-decoration: none;
 }
 
-.top-header .right i {
-  margin-right: 5px;
+.right .fab {
+  font-size: 16px;
 }
+
+
 
 .cart-count {
   background: green;
@@ -143,7 +151,6 @@ nav .dropdown-content li a:hover {
   background-color: #f0f0f0;
   color: #0077cc;
 }
-
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -505,7 +512,6 @@ nav .dropdown-content li a:hover {
   background-color: #f0f3f7;
   position: relative;
   padding: 80px 0;
-  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
 }
 
 .details-about-us .container {
@@ -651,8 +657,6 @@ nav .dropdown-content li a:hover {
 }
 
 .testimonial-section {
-  background-color: #f0f3f7;
-  clip-path: polygon(0 10%, 100% 10%, 100% 85%, 0% 100%);
   padding: 60px 20px;
   text-align: center;
 }
@@ -688,7 +692,7 @@ nav .dropdown-content li a:hover {
   width: 100%;
   max-width: 600px;
   padding: 30px;
-  background: #fff;
+  background:  rgb(244, 244, 244);
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
   opacity: 0;
@@ -808,7 +812,6 @@ nav .dropdown-content li a:hover {
   background-color: #f5f7fa;
   padding-top: 35px;
   padding-bottom: 25px;
-  clip-path: polygon(0 15%, 100% 0%, 100% 95%, 0% 100%);
   position: relative;
 }
 
@@ -1100,7 +1103,7 @@ nav .dropdown-content li a:hover {
 
 .info-wrapper {
   position: relative;
-  background: linear-gradient(to bottom, #f9f9f9 50%, #444 50%);
+  background: linear-gradient(to bottom, transparent 50%, #444 50%);
   padding: 40px 0;
 }
 
@@ -2037,7 +2040,6 @@ nav .dropdown-content li a:hover {
 
 .faq-footer {
   text-align: center;
-  background-color:  #f1f4f9;
   padding: 50px 20px;
 }
 
@@ -2890,3 +2892,159 @@ button.ghost {
 .forgot-password-container h1 {
   color: #000;
 }
+
+/* ======= DARK MODE TOGGLE SWITCH ======= */
+.dark-toggle-wrapper {
+  position: absolute;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(17px);
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .hero-wrapper,
+.dark-mode .top-header,
+.dark-mode header,
+.dark-mode .card,
+.dark-mode .testimonial,
+.dark-mode .right-boxes,
+.dark-mode .info-boxes,
+.dark-mode .details-about-us,
+.dark-mode .accountant-help,
+.dark-mode .finance-solution-section,
+.dark-mode .about-section,
+.dark-mode .Aboutbelow-section,
+.dark-mode .team-section,
+.dark-mode .service-section.gray,
+.dark-mode .service-section.white,
+.dark-mode .faq-header,
+.dark-mode .faq-container,
+.dark-mode .faq-footer,
+.dark-mode .error-container,
+.dark-mode .blog-container,
+.dark-mode .blog-post,
+.dark-mode .header-description-section,
+.dark-mode .pagination,
+.dark-mode .blog-sidebar,
+.dark-mode .sidebar-section,
+.dark-mode .contact-card,
+.dark-mode .container2,
+.dark-mode .signUpForm,
+.dark-mode .signInForm,
+.dark-mode .forgotForm,
+.dark-mode .overlay-container,
+.dark-mode .overlay-panel.overlay-left,
+.dark-mode .overlay-panel.overlay-right,
+.dark-mode .form-container.sign-in-container,
+.dark-mode .hero-wrapper8,
+.dark-mode .form-container.sign-up-container,
+.dark-mode .client-section {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+}
+
+.dark-mode a,
+.dark-mode a:visited {
+  color: #90caf9;
+}
+
+.dark-mode .btn,
+.dark-mode .btn-small,
+.dark-mode .btn-blue {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #90caf9;
+}
+
