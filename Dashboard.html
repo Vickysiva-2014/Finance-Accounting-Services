@@ -9,66 +9,212 @@
 </head>
 <body>
   <div class="dash-dashboard">
-
+    
     <!-- Sidebar -->
     <div class="dash-sidebar">
       <h2 class="dash-sidebar-title">FinAcc Dashboard</h2>
-      <hr Class ="dash-line">
+      <hr class="dash-line">
       <ul class="dash-nav-list">
-        <li><a href="Dashboard.html">Dashboard</a></li>
-        <!-- <li><a href="#">Invoices</a></li>
-        <li><a href="#">Transactions</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Settings</a></li> -->
+        <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
+        <li><a href="#" onclick="showInvoices()">Invoices</a></li>
+        <li><a href="#" onclick="showTransactions()">Transactions</a></li>
+        <li><a href="#" onclick="showReports()">Reports</a></li>
       </ul>
     </div>
 
     <!-- Main Content -->
     <div class="dash-main-content">
 
-      <div class="dash-header">
-        <h1 class="dash-header-title">Financial Overview</h1>
-        <div class="dash-header-actions">
-          <button class="dash-btn dash-btn-home" onclick="window.location.href='index.html'">Home</button>
-          <button class="dash-btn dash-btn-download" onclick="downloadReport()">Download Report</button>
-        </div>
-                 <div class="dark-toggle-wrapper">
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider round"></span>
-    </label>
+      <!-- Dashboard Overview Section -->
+      <div id="dashboardSection">
+        <div class="dash-header">
+          <h1 class="dash-header-title">Financial Overview</h1>
+          <div class="dash-header-actions">
+            <!-- <button class="dash-btn dash-btn-logout" onclick="logout()">Logout</button> -->
+            <button class="dash-btn dash-btn-home" onclick="window.location.href='index.html'">Home</button>
+          <div class="theme-toggle" id="themeToggle">
+  <span class="icon sun">&#9728;</span>
+  <div class="toggle-slider">
+    <div class="circle"></div>
   </div>
+  <span class="icon moon">&#9790;</span>
+</div>
+          </div>
+          
+        </div>
+
+        <div class="dash-cards">
+          <div class="dash-card dash-card-green">
+            <h3>Total Revenue</h3>
+            <p>₹5,80,000</p>
+          </div>
+          <div class="dash-card dash-card-red">
+            <h3>Total Expenses</h3>
+            <p>₹3,20,000</p>
+          </div>
+          <div class="dash-card dash-card-blue">
+            <h3>Net Profit</h3>
+            <p>₹2,60,000</p>
+          </div>
+        </div>
+
+        <div class="dash-charts">
+          <div class="dash-chart-box">
+            <h3>Income vs Expenses</h3>
+            <canvas id="incomeExpenseChart"></canvas>
+          </div>
+          <div class="dash-chart-box">
+            <h3>Monthly Revenue</h3>
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
       </div>
 
-      <!-- Summary Cards -->
-      <div class="dash-cards">
-        <div class="dash-card dash-card-green">
-          <h3>Total Revenue</h3>
-          <p>₹5,80,000</p>
-        </div>
-        <div class="dash-card dash-card-red">
-          <h3>Total Expenses</h3>
-          <p>₹3,20,000</p>
-        </div>
-        <div class="dash-card dash-card-blue">
-          <h3>Net Profit</h3>
-          <p>₹2,60,000</p>
+      <!-- Invoice Section -->
+      <div id="invoiceSection" style="display: none;">
+        <h2>Invoice Details</h2>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Invoice #</th>
+              <th>Client</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>INV001</td>
+              <td>ABC Corp</td>
+              <td>2025-07-01</td>
+              <td>₹50,000</td>
+              <td><span class="status paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>INV002</td>
+              <td>XYZ Ltd</td>
+              <td>2025-07-05</td>
+              <td>₹30,000</td>
+              <td><span class="status unpaid">Unpaid</span></td>
+            </tr>
+            <tr>
+              <td>INV003</td>
+              <td>Global Inc</td>
+              <td>2025-07-10</td>
+              <td>₹70,000</td>
+              <td><span class="status paid">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="dash-chart-box" style="margin-top: 30px;">
+          <h3>Invoice Amount Trend</h3>
+          <canvas id="invoiceChart"></canvas>
         </div>
       </div>
 
-      <!-- Charts -->
-      <div class="dash-charts">
-        <div class="dash-chart-box">
-          <h3>Income vs Expenses</h3>
-          <canvas id="incomeExpenseChart"></canvas>
-        </div>
-        <div class="dash-chart-box">
-          <h3>Monthly Revenue</h3>
-          <canvas id="revenueChart"></canvas>
+      <!-- Transaction Section -->
+      <div id="transactionSection" style="display: none;">
+        <h2>Transaction Details</h2>
+
+        <table class="invoice-table transaction-table">
+          <thead>
+            <tr>
+              <th>Transaction ID</th>
+              <th>Client</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TXN1001</td>
+              <td>ABC Corp</td>
+              <td>2025-07-02</td>
+              <td>₹25,000</td>
+              <td>Credit</td>
+              <td><span class="status completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>TXN1002</td>
+              <td>XYZ Ltd</td>
+              <td>2025-07-06</td>
+              <td>₹18,000</td>
+              <td>Debit</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>TXN1003</td>
+              <td>Global Inc</td>
+              <td>2025-07-12</td>
+              <td>₹35,000</td>
+              <td>Credit</td>
+              <td><span class="status completed">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="dash-chart-box" style="margin-top: 30px;">
+          <h3>Transaction Flow Chart</h3>
+          <canvas id="transactionChart"></canvas>
         </div>
       </div>
+      <div id="reportsSection" style="display: none;">
+  <h2>Report Summary</h2>
+  <div style="text-align: right; margin-bottom: 10px;">
+  <button class="dash-btn dash-btn-download" onclick="downloadReportToExcel()">Download Report</button>
+  </div>
+
+  <table class="invoice-table report-table">
+    <thead>
+      <tr>
+        <th>Report ID</th>
+        <th>Title</th>
+        <th>Created On</th>
+        <th>Type</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RPT001</td>
+        <td>Q1 Financial Summary</td>
+        <td>2025-07-01</td>
+        <td>Quarterly</td>
+        <td><span class="status completed">Completed</span></td>
+      </tr>
+      <tr>
+        <td>RPT002</td>
+        <td>Sales Analysis</td>
+        <td>2025-07-10</td>
+        <td>Sales</td>
+        <td><span class="status pending">Pending</span></td>
+      </tr>
+      <tr>
+        <td>RPT003</td>
+        <td>Expense Breakdown</td>
+        <td>2025-07-20</td>
+        <td>Expense</td>
+        <td><span class="status completed">Completed</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="dash-chart-box" style="margin-top: 30px;">
+    <h3>Report Insights</h3>
+    <canvas id="reportChart"></canvas>
+  </div>
+</div>
+
     </div>
   </div>
+
+  <!-- Report Section -->
+
 
   <script src="xlsx.full.min.js"></script>
   <script src="dashboard.js"></script>

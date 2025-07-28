@@ -69,21 +69,27 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById('darkModeToggle');
+const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
 
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    toggle.checked = true;
-  }
+  // Load saved theme on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      themeToggle.classList.add("dark");
+    }
+  });
 
-  toggle.addEventListener("change", function () {
-    if (this.checked) {
-      document.body.classList.add("dark-mode");
+  // Toggle theme on click
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    themeToggle.classList.toggle("dark");
+
+    // Save the preference
+    if (body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
     } else {
-      document.body.classList.remove("dark-mode");
       localStorage.setItem("theme", "light");
     }
   });
-});
+

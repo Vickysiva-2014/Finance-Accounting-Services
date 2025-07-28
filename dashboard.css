@@ -4,6 +4,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+/* === Layout === */
 .dash-dashboard {
   display: flex;
 }
@@ -18,8 +19,8 @@ body, html {
 .dash-sidebar-title {
   margin-top: 0;
   color: beige;
-  font-size: 24px;
-  font-weight:bolder;
+  font-size: 22px;
+  font-weight: bolder;
   margin-bottom: 20px;
 }
 
@@ -47,6 +48,7 @@ body, html {
   background: #f5f5f5;
 }
 
+/* === Header === */
 .dash-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +56,8 @@ body, html {
 }
 
 .dash-header-title {
-  font-size: 24px;
+  font-size: 20px;
+  width: 200px;
 }
 
 .dash-header-actions {
@@ -67,16 +70,18 @@ body, html {
   padding: 8px 14px;
   border: none;
   cursor: pointer;
+  margin-left: 300px;
   border-radius: 4px;
   font-weight: bold;
 }
 
 .dash-btn-home {
-  background: #ccc;
+  background:#007bff;
+  color: white;
 }
 
 .dash-btn-home:hover {
-background:grey;
+  background: grey;
 }
 
 .dash-btn-download {
@@ -116,6 +121,7 @@ background:grey;
   margin: 10px 0 0;
 }
 
+/* === Charts === */
 .dash-charts {
   display: flex;
   gap: 20px;
@@ -131,6 +137,7 @@ background:grey;
   min-width: 300px;
 }
 
+/* === Tables === */
 .dash-tables {
   display: flex;
   gap: 20px;
@@ -145,12 +152,107 @@ background:grey;
   margin-top: 10px;
 }
 
-.dash-table th, .dash-table td {
+.dash-table th,
+.dash-table td {
   padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
+/* === Invoice Table === */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.invoice-table thead {
+  background-color: #004080;
+  color: #fff;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.invoice-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* === Report Table === */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.report-table th,
+.report-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.report-table th {
+  background-color: #f4f6f8;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.report-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* === Status Badges === */
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+}
+
+.status.paid {
+  background-color: #e0f7e9;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.status.unpaid {
+  background-color: #ffeaea;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.status.completed {
+  background-color: #4CAF50;
+}
+
+.status.pending {
+  background-color: #FFC107;
+  color: #333;
+}
+
+.status.rejected {
+  background-color: #F44336;
+}
+
+/* === Line Divider === */
 .dash-line {
   border: none;
   border-top: 2px dashed grey;
@@ -158,118 +260,100 @@ background:grey;
   width: 100%;
 }
 
-.dark-toggle-wrapper {
-  position: absolute;
-  right: 20px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
+/* === Toggle Switch for Dark Mode === */
+.theme-toggle {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 24px;
+  gap: 10px;
+  margin-top: -5px;
 }
 
-.slider:before {
+.icon {
+  font-size: 20px;
+  color: #333;
+  
+}
+
+.icon.sun {
+  margin-left: 10px;
+}
+
+.toggle-slider {
+  width: 40px;
+  height: 20px;
+  background-color: #f0e68c;
+  border-radius: 30px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-slider .circle {
+  width: 15px;
+  height: 15px;
+  background-color: gold;
+  border-radius: 50%;
   position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
+  top: 3px;
   left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+.theme-toggle.dark .toggle-slider {
+  background-color: #222;
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
+.theme-toggle.dark .toggle-slider .circle {
+  background-color: #1e90ff;
+  left: 22px;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 18px;
+.theme-toggle.dark .icon.sun {
+  color: #aaa;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.theme-toggle.dark .icon.moon {
+  color: #1e90ff;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(17px);
-}
+/* === Dark Mode Styling === */
 body.dark-mode {
-  background-color: #121212;
+  background: #121212;
   color: #f5f5f5;
 }
 
-.dark-mode .hero-wrapper,
+body.dark-mode .dash-sidebar {
+  background-color: #1e1e1e;
+}
+
 .dark-mode .dash-main-content,
 .dark-mode .dash-sidebar,
-.dark-mode .dash-sidebar-title,
-.dark-mode .dash-card-green,
-.dark-mode .dash-card-red,
-.dark-mode .dash-card-blue,
+.dark-mode .dash-card,
 .dark-mode .dash-chart-box,
-.dark-mode .dash-btn-home,
-.dark-mode .dash-btn-download,
-.dark-mode .client-section {
+.dark-mode .invoice-table,
+.dark-mode .report-table {
   background-color: #1e1e1e !important;
   color: #f5f5f5 !important;
+}
+
+.dark-mode .dash-btn-home,
+.dark-mode .dash-btn-download {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .dash-table th,
+.dark-mode .dash-table td,
+.dark-mode .invoice-table th,
+.dark-mode .invoice-table td,
+.dark-mode .report-table th,
+.dark-mode .report-table td {
+  border-color: #444;
+}
+
+.dark-mode .report-table th {
+  background-color: #222;
+  color: #ccc;
 }
 
 .dark-mode a,
@@ -284,4 +368,3 @@ body.dark-mode {
   color: #fff;
   border: 1px solid #90caf9;
 }
-
