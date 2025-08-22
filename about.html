@@ -1,304 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Financial & Account Services</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="about.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial & Accounting Services</title>
+  <link rel="stylesheet" href="about.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="hero-wrapper2" id="hero">
-  <div class="top-header">
-  <div class="left">
-    <i class="fas fa-phone-alt"></i> 123456789
-  </div>
-  <div class="right">
-    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
-    <span>MON - FRI 09:00 - 20:00</span>
-    <a href="https://mail.google.com/">E-MAIL US</a>
-      <div class="theme-toggle" id="themeToggle">
-  <span class="icon sun">&#9728;</span>
-  <div class="toggle-slider">
-    <div class="circle"></div>
-  </div>
-  <span class="icon moon">&#9790;</span>
-</div>
-  </div>
-</div>
-
-<header id="main-header">
+  <header class="navbar">
   <div class="logo">
-    <img src="Images/Logo.png" alt="Logo" />
+    <a href="#" class="logo-text">Stackly</a>
   </div>
-  <nav>
-    <ul class="menu">
-      <li class="dropdown"><a href="index.html">Home</a></li>
-      <li class="dropdown"><a href="about.html">About</a></li>
-      <li class="dropdown"><a href="service.html">Our Services</a></li>
-      <li class="dropdown">
-        <a href="#" class="toggle-dropdown">Pages <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="404.html">404 Page</a></li>
-        </ul>
-      </li>
-      <li><a href="Dashboard.html">Dashboard</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li class="login-signup">
-        <a href="signin.html" class="btn signup">SIGN IN/UP</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+   <button class="menu-toggle">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <!-- <li><a href="404_1.html">Dashboard</a></li> -->
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="404_1.html">Contact</a></li>
+        <li><button class="btn-appointment" onclick="location.href='login.html'">Make Appointment</button></li>
+      </ul>
+    </nav>
+  </header>
 
+  <hr class="divider" />
 
-  <section class="hero" id="aboutHero">
-  <div class="overlay"></div>
-  <div class="hero-content" id="aboutHeroContent">
+  <section class="hero">
+  <div class="hero-content">
+    <h1>About Us</h1>
+    <p><a href="index.html">Home</a> &gt; <span>About Us</span></p>
   </div>
 </section>
 
 <section class="about-section">
   <div class="about-container">
-    <h2 class="about-title">
-      DISCOVER THE <span class="about-highlight">FINANCIAL KEYS</span> TO GROW SUCCESSFULLY
+    <!-- Left Side (Images & Badge) -->
+    <div class="about-images">
+      <div class="award-badge">
+        <i class="fas fa-trophy"></i> Best Award
+      </div>
+      <div class="image-grid">
+        <img src="Images1/finance1.jpg" alt="Finance" class="img1">
+        <img src="Images1/finance2.jpg" alt="Stack of coins" class="img2">
+        <div class="video-box">
+          <img src="Images1/finance3.jpg" alt="Video" class="img3">
+          <div class="play-btn">&#9658;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side (Content) -->
+    <div class="about-content">
+      <h4 data-aos="fade-up" data-aos-delay="400">About Us</h4>
+      <h2 data-aos="fade-up" data-aos-delay="500">
+        We Provide Best Service<br>
+        Financial Management<br>
+        Since 2005
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="600">
+        We are dedicated to providing the best financial solutions tailored to your needs. Our team works with professionalism and care, helping you achieve growth and stability. With years of experience and trusted expertise, we ensure reliable financial management for your success.
+      </p>
+      <a href="404_1.html" class="btn" data-aos="fade-up" data-aos-delay="700">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="trusted-section">
+    <h2 class="trusted-heading fade-in-section" data-aos="fade-up" data-aos-delay="800">
+      Trusted Over <span>+1200</span> Client in The World
     </h2>
-    <p class="about-desc">
-      Objectively innovate empowered manufactured products whereas parallel platforms.
-      Holisticly predominate extensible testing procedures for reliable supply chains.
-      Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-      Proactively envisioned multimedia based expertise and cross-media growth strategies.
-      Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.
-    </p>
-   <hr class="about-hr" />
-
-    <div class="about-boxes">
-      <div class="about-box">
-        <div class="about-number orange">1</div>
-        <div class="about-content">
-          <h3>FINANCIAL AFFAIRS</h3>
-          <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
-        </div>
-      </div>
-      <div class="about-box">
-        <div class="about-number blue">2</div>
-        <div class="about-content">
-          <h3>FINANCIAL REVIEW</h3>
-          <p>Dynamically procrastinate B2C users after installed base benefits efficiently.</p>
-        </div>
-      </div>
-      <div class="about-box">
-        <div class="about-number green">3</div>
-        <div class="about-content">
-          <h3>FINANCIAL BUNDLES</h3>
-          <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
-        </div>
+    <div class="logo-slider-wrapper">
+      <div class="logo-slider" data-aos="fade-up" data-aos-delay="900">
+        <img src="Images1/Client1.png" alt="Construct">
+        <img src="Images1/Client2.png" alt="Morex">
+        <img src="Images1/Client3.png" alt="Poolcoast">
+        <img src="Images1/Client4.png" alt="Square">
+        <img src="Images1/Client5.png" alt="Brandco">
+         <img src="Images1/Client1.png" alt="Construct">
+        <img src="Images1/Client2.png" alt="Morex">
+        <img src="Images1/Client3.png" alt="Poolcoast">
+        <img src="Images1/Client4.png" alt="Square">
+        <img src="Images1/Client5.png" alt="Brandco">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="Aboutbelow-section">
-  <div class="Aboutbelow-container">
- <div class="Aboutbelow-image slider-container">
-  <div class="slider">
-    <img src="Images/image3.jpg" alt="Slide 1" />
-    <img src="Images/image2.jpg" alt="Slide 2" />
-    <img src="Images/image1.jpg" alt="Slide 3" />
-  </div>
+<section class="our-case">
+  <div class="section-title" data-aos="fade-up">Our Cases</div>
+  <div class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's See Our Latest Project</div>
+  <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+    Take a closer look at some of our recent work. From financial planning to data management, 
+    we provide reliable solutions tailored to our clients' needs. Discover how we deliver results 
+    that make a difference.
+  </p>
+
+<div class="card-container" >
+  <div class="card card-1" data-aos="fade-up" data-aos-delay="200">
+    <img src="Images1/ourcase1.jpg" alt="Investment Plan" />
+    <div class="card-content">
+      <div class="card-title">Investment Plan</div>
+      <div class="hover-text hover-text-1">Our Investment Plan is tailored to help clients grow their wealth efficiently.
 </div>
-    <div class="Aboutbelow-accordion">
-  <div class="accordion-item active">
-    <div class="accordion-header">
-      <i class="icon">☰</i>
-      <h3>Collaboratively Administrate Empowered Markets</h3>
-    </div>
-    <div class="accordion-content">
-      <p>Community health workers and organizations like UNICEF drive impactful change through fairness and capacity building.</p>
     </div>
   </div>
 
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <i class="icon">☰</i>
-      <h3>Plug-and-Play Networks</h3>
-    </div>
-    <div class="accordion-content">
-      <p>Enable dynamic and scalable solutions with modular plug-and-play infrastructure to enhance operational efficiency across digital ecosystems.</p>
+  <div class="card card-2" data-aos="fade-up" data-aos-delay="300">
+    <img src="Images1/ourcase2.jpg" alt="Money Plan" />
+    <div class="card-content">
+      <div class="card-title">Money Plan</div>
+      <div class="hover-text hover-text-2">Our Money Plan helps you manage daily finances and optimize your spending.</div>
     </div>
   </div>
 
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <i class="icon">☰</i>
-      <h3>B2C Users After Installed Base</h3>
-    </div>
-    <div class="accordion-content">
-      <p>Targeted engagement strategies for B2C users through analysis of post-installation behavior and personalized customer outreach programs.</p>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <i class="icon">☰</i>
-      <h3>Visualize Customer Directed Convergence</h3>
-    </div>
-    <div class="accordion-content">
-      <p>Empower product teams to visualize user trends and channel convergence, unlocking new opportunities for customer-focused innovations.</p>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <i class="icon">☰</i>
-      <h3>Efficiently Unleash Cross-Media</h3>
-    </div>
-    <div class="accordion-content">
-      <p>Seamlessly deliver cross-media experiences by synchronizing multi-platform content to engage audiences with tailored storytelling.</p>
+  <div class="card card-3" data-aos="fade-up" data-aos-delay="400">
+    <img src="Images1/ourcase3.jpg" alt="Data Entry" />
+    <div class="card-content">
+      <div class="card-title">Data Entry</div>
+      <div class="hover-text hover-text-3">Our Data Entry services ensure fast, accurate, and secure handling of your business records.</div>
     </div>
   </div>
 </div>
 </section>
+
+
+<div class="counter-wrapper">
+  <div class="counter-section" data-aos="fade-up" data-aos-delay="300">
+    <div class="counter-box" data-aos="fade-up" data-aos-delay="500">
+      <div class="icon">
+  <img src="Images1/counter1.png" alt="Users Icon" style="width: 50px; height: 50px;" />
+</div>
+      <div class="counter" data-target="1345">0</div>
+      <p>Happy Clients</p>
+    </div>
+    <div class="counter-box" data-aos="fade-up" data-aos-delay="600">
+      <div class="icon">
+  <img src="Images1/counter2.png" alt="Users Icon" style="width: 50px; height: 50px;" />
+</div>
+      <div class="counter" data-target="25">0</div>
+      <p>Years of Experience</p>
+    </div>
+    <div class="counter-box" data-aos="fade-up" data-aos-delay="700">
+      <div class="icon">
+  <img src="Images1/counter3.png" alt="Users Icon" style="width: 50px; height: 50px;" />
+</div>
+      <div class="counter" data-target="2678">0</div>
+      <p>Cases Completed</p>
+    </div>
+    <div class="counter-box" data-aos="fade-up" data-aos-delay="800">
+      <div class="icon">
+  <img src="Images1/counter4.png" alt="Users Icon" style="width: 50px; height: 50px;" />
+</div>
+      <div class="counter" data-target="245">0</div>
+      <p>Team Members</p>
+    </div>
+  </div>
+</div>
 
 <section class="team-section">
-  <div class="team-header">
-    <h2><span>MEET</span> <span class="highlight">OUR TEAM</span></h2>
-    <p>
-      Objectively innovate empowered manufactured products whereas parallel platforms.
-      Holistically predominate extensible testing procedures for reliable supply chains.
-      Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-      Proactively envisioned multimedia based expertise.
-    </p>
-  </div>
+  <div class="section-title">Our Team</div>
+  <h2 class="section-subtitle">Meet Our Expert Team</h2>
+  <p class="section-description">
+  Our finance and accounting professionals bring years of experience in managing business finances, 
+  optimizing tax strategies, and delivering accurate reporting. With a deep understanding of financial 
+  management, compliance, and strategic planning, our team is dedicated to helping you achieve 
+  long-term growth and stability.
+  </p>
 
-  <div class="team-members">
+  <div class="team-container">
     <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="David Monreal">
-      <h4>NAME 1</h4>
-      <p>CEO</p>
-    </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Hugo Walker">
-      <h4>NAME 2</h4>
-      <p>FOUNDER</p>
-    </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Angela Fernandez">
-      <h4>NAME 3</h4>
-      <p>STRATEGY</p>
-    </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/men/27.jpg" alt="Simon Moreno">
-      <h4>NAME 4</h4>
-      <p>GENERAL COUNSEL</p>
+      <div class="team-image">
+        <img src="Images1/about_team1.jpg" alt="John Doe">
+        <div class="overlay">
+          <div class="social-icons">
+            <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404_1.html"><i class="fab fa-twitter"></i></a>
+            <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-info">
+        <h3>John Doe</h3>
+        <p>Founder</p>
+      </div>
     </div>
 
     <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Paula Sterling">
-      <h4>NAME 5</h4>
-      <p>CHIEF FINANCIAL OFFICER</p>
+      <div class="team-image">
+        <img src="Images1/about_team2.jpg" alt="John Johnson">
+        <div class="overlay">
+          <div class="social-icons">
+            <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404_1.html"><i class="fab fa-twitter"></i></a>
+            <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-info">
+        <h3>Ellisa Doe</h3>
+        <p>Manager</p>
+      </div>
     </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Josip Vittielo">
-      <h4>NAME 6</h4>
-      <p>HEAD OF ACCOUNTANTS</p>
-    </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Alphonse Baily">
-      <h4>NAME 7</h4>
-      <p>HEAD OF ADVISORS</p>
-    </div>
-    <div class="team-card">
-      <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Marwin Klavan">
-      <h4>NAME 8</h4>
-      <p>SENIOR SALES ASSOCIATE</p>
-    </div>
-  </div>
-</section>
 
-<section class="info-wrapper">
-  <div class="info-boxes">
-    <div class="box">
-      <i class="fa-solid fa-clock"></i>
-      <p>MONDAY TO FRIDAY<br><span>09:00 - 20:00</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-location-dot"></i>
-      <p>PLACE,<br><span>STATE CITY COUNTRY</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-envelope"></i>
-      <p>E-MAIL:<br><span>INFO@YOURCOMPANY.COM</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-phone"></i>
-      <p>CALL US:<br><span>123456789</span></p>
+    <div class="team-card">
+      <div class="team-image">
+        <img src="Images1/about_team3.jpg" alt="Andre Joe">
+        <div class="overlay">
+          <div class="social-icons">
+            <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="404_1.html"><i class="fab fa-twitter"></i></a>
+            <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-info">
+        <h3>Andre Joe</h3>
+        <p>Assistant</p>
+      </div>
     </div>
   </div>
 </section>
 
-
-<footer class="footer">
+<footer class="footer-section">
   <div class="footer-container">
-    <div class="footer-box about">
-      <div class="logo">
-        <img src="Images/Logo.png" alt="Logo" />
-      </div>
+    <div class="footer-column about">
+      <a href="404_1.html" class="logo-text1">Stackly</a>
       <p>
-        Efficiently enable enabled sources and cost effective products.
-        Completely synthesize principle-centered information after ethical
-        communities.
+        Empowering businesses with smart solutions your success is our priority.
       </p>
-      <div class="social-icons">
-      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
-        <a href=https://www.pinterest.com/business/login><i class="fa-brands fa-pinterest-p"></i></a>
+      <div class="footer-socials">
+        <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="404_1.html"><i class="fab fa-twitter"></i></a>
+        <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+        <a href="404_1.html"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
 
-    <div class="footer-box news">
-      <h3>RECENT NEWS</h3>
+    <div class="footer-column links">
+      <h4>Quick Links</h4>
       <ul>
-        <li>Front-end processes with effective convergence<br><span>3 days ago</span></li>
-        <li>User friendly intellectual capital<br><span>5 days ago</span></li>
-        <li>Innovate open-source infrastructures<br><span>1 month ago</span></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="404_1.html">Pricing</a></li>
+        <li><a href="404_1.html">Contact</a></li>
       </ul>
     </div>
 
-    <div class="footer-box links">
-      <h3>LINKS</h3>
-     <ul>
-  <li><a href="index.html">HOME</a></li>
-  <li><a href="service.html">SERVICES</a></li>
-  <li><a href="about.html">ABOUT</a></li>
-  <li><a href="blogs.html">BLOG</a></li>
-  <li><a href="contact.html">CONTACT</a></li>
-</ul>
+    <div class="footer-column links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="404_1.html">Privacy Policy</a></li>
+        <li><a href="404_1.html">Terms and Conditions</a></li>
+        <li><a href="404_1.html">Disclaimer</a></li>
+        <li><a href="404_1.html">Support</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
     </div>
 
-    <div class="footer-box newsletter">
-  <h3>NEWSLETTER</h3>
-  <p>Enter your e-mail and subscribe to our newsletter</p>
-
-  <form action="https://mail.google.com/" method="get" target="_blank">
-    <input type="email" placeholder="E-mail" required>
-    <button type="submit">SUBSCRIBE</button>
-  </form>
-</div>
+    <div class="footer-column newsletter">
+      <h4>Newsletter</h4>
+      <ul class="contact-info">
+        <li><i class="fas fa-map-marker-alt"></i> state country</li>
+        <li><i class="fas fa-envelope"></i> stackly@thestackly.com</li>
+        <li><i class="fas fa-phone-alt"></i> 123456789 </li>
+      </ul>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit" onclick="location.href='404_1.html'"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright Yourcompany Inc. All Rights Reserved.</p>
+    <p>Copyright © Stackly 2025. All rights reserved.</p>
   </div>
 </footer>
 
 
-<script src="about.js"></script> 
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true     
+  });
+
+  const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    let count = +counter.innerText;
+    const increment = Math.ceil(target / 100);
+
+    if (count < target) {
+      counter.innerText = Math.min(count + increment, target);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>

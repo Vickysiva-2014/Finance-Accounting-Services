@@ -1,161 +1,134 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleButtons = document.querySelectorAll('.toggle-dropdown');
 
-  toggleButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      const dropdown = this.nextElementSibling;
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.hero-left')?.classList.add('visible');
+  document.querySelector('.hero-right')?.classList.add('visible');
+});
 
-     
-      document.querySelectorAll('.dropdown-content').forEach(menu => {
-        if (menu !== dropdown) {
-          menu.classList.remove('show');
-        }
-      });
 
-    
-      dropdown.classList.toggle('show');
-    });
-  });
+const serviceCards = document.querySelectorAll('.service-card');
 
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-content').forEach(menu => {
-        menu.classList.remove('show');
-      });
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('animate-on-scroll', 'active');
+      }, index * 300);
+      cardObserver.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.2 });
+
+serviceCards.forEach(card => cardObserver.observe(card));
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+
+slides[currentSlide].classList.add('active');
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 3000);
+
+
+const fadeSections = document.querySelectorAll('.fade-in-section');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeSections.forEach(section => sectionObserver.observe(section));
+
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  const title = card.querySelector('.card-title');
+  title?.addEventListener('click', () => {
+    cards.forEach(c => {
+      if (c !== card) c.classList.remove('active');
+    });
+    card.classList.toggle('active');
   });
 });
 
 
-
-const slides = [
-  {
-    title: "FINANCIAL SERVICES",
-    desc: "Carefully manage financial markets using ready-to-use financial systems. Actively work with customers after their investments earn profits. Clearly understand and show how customer needs are shaping financial services.",
-    btn: "LEARN MORE",
-    bg: "Images/Finance.jpg"
-  },
-  {
-    title: "ACCOUNTING SERVICES",
-    desc: "Share information across different platforms, even if it doesn’t add extra value. Deliver results quickly and on time for live systems. Strongly support both online and offline business solutions.",
-    btn: "LEARN MORE",
-    bg: "Images/Accounting.jpg"
-  },
-  {
-    title: "YOU CAN FOCUS ON WHAT YOU DO BEST",
-    desc: "Work together effectively in specialized markets where resources are limited. Provide personalized customer service with strong, creative ideas. Continuously improve how resources are managed and balanced.",
-    btn: "GET STARTED",
-    bg: "Images/Focus.jpg"
-  }
-];
-
-let index = 0;
-const hero = document.getElementById("hero");
-const content = document.getElementById("heroContent");
-
-function updateHero() {
-  const slide = slides[index];
-
-  hero.style.background = `linear-gradient(rgba(4, 31, 59, 0.75), rgba(4, 33, 61, 0.75)), url('${slide.bg}') no-repeat center center / cover`;
-
-  content.classList.remove("fade-in");
-  void content.offsetWidth;
-  content.innerHTML = `
-    <h1>${slide.title}</h1>
-    <p>${slide.desc}</p>
-    <a href="service.html" class="btn">${slide.btn}</a>
-  `;
-  content.classList.add("fade-in");
-
-  index = (index + 1) % slides.length;
-}
-
-updateHero();
-setInterval(updateHero, 5000);
-
-const testimonials = document.querySelectorAll(".testimonial");
-const dots = document.querySelectorAll(".dot");
-let current = 0;
+let testimonialIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
 
 function showTestimonial(index) {
-  testimonials.forEach((t, i) => {
-    t.classList.remove("active");
-    dots[i].classList.remove("active");
+  testimonials.forEach((testimonial, i) => {
+    testimonial.classList.toggle('active', i === index);
   });
-  testimonials[index].classList.add("active");
-  dots[index].classList.add("active");
 }
 
-
 setInterval(() => {
-  current = (current + 1) % testimonials.length;
-  showTestimonial(current);
-}, 6000);
+  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+  showTestimonial(testimonialIndex);
+}, 4000);
 
 
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    current = i;
-    showTestimonial(current);
-  });
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    let count = +counter.innerText;
+    const increment = Math.ceil(target / 100);
+
+    if (count < target) {
+      counter.innerText = Math.min(count + increment, target);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
 });
 
-const revealCards = document.querySelectorAll('.card.reveal');
+const images = document.querySelectorAll(".arc-img");
 
-  function revealOnScroll() {
-    const triggerBottom = window.innerHeight * 0.85;
+  function rotateArcImages() {
+    const classes = ["left", "center", "right"];
 
-    revealCards.forEach((card, i) => {
-      const cardTop = card.getBoundingClientRect().top;
+    const current = [...images].map(img => {
+      return classes.find(cls => img.classList.contains(cls));
+    });
 
-      if (cardTop < triggerBottom) {
-        setTimeout(() => {
-          card.classList.add('active');
-        }, i * 200); 
-      }
+
+    const rotated = [current[2], current[0], current[1]];
+
+    images.forEach((img, i) => {
+      img.classList.remove("left", "center", "right");
+      img.classList.add(rotated[i]);
     });
   }
 
-    window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
+  setInterval(rotateArcImages, 3000);
 
-window.addEventListener("scroll", function () {
-  const header = document.getElementById("main-header");
-  if (window.innerWidth > 768) {
-    if (window.scrollY > 50) {
-      header.classList.add("fixed");
-    } else {
-      header.classList.remove("fixed");
-    }
-  } else {
-    header.classList.remove("fixed");
-  }
+
+  document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
+
+  const container = document.querySelector('.login-container');
+  const swapBtn = document.getElementById('swapBtn');
+
+  swapBtn.addEventListener('click', () => {
+    container.classList.toggle('swap');
+  });
+
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Your message has been sent successfully!");
+  this.reset();
 });
-
-
-const themeToggle = document.getElementById("themeToggle");
-  const body = document.body;
-
-  // Load saved theme on page load
-  window.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
-      themeToggle.classList.add("dark");
-    }
-  });
-
-  // Toggle theme on click
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    themeToggle.classList.toggle("dark");
-
-    // Save the preference
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
-  });
-
-

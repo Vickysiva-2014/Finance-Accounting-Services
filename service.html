@@ -3,265 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="service.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>Financial & Accounting Services</title>
+  <link rel="stylesheet" href="service.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="hero-wrapper3" id="hero">
-
-    <div class="top-header">
-  <div class="left">
-    <i class="fas fa-phone-alt"></i> 123456789
-  </div>
-  <div class="right">
-    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
-    <span>MON - FRI 09:00 - 20:00</span>
-    <a href="https://mail.google.com/">E-MAIL US</a>
-      <div class="theme-toggle" id="themeToggle">
-  <span class="icon sun">&#9728;</span>
-  <div class="toggle-slider">
-    <div class="circle"></div>
-  </div>
-  <span class="icon moon">&#9790;</span>
-</div>
-  </div>
-</div>
-
-<header id="main-header">
+  <header class="navbar">
   <div class="logo">
-    <img src="Images/Logo.png" alt="Logo" />
+    <a href="#" class="logo-text">Stackly</a>
   </div>
-  <nav>
-    <ul class="menu">
-      <li class="dropdown"><a href="index.html">Home</a></li>
-      <li class="dropdown"><a href="about.html">About</a></li>
-      <li class="dropdown"><a href="service.html">Our Services</a></li>
-      <li class="dropdown">
-        <a href="#" class="toggle-dropdown">Pages <i class="fas fa-caret-down"></i></a>
-        <ul class="dropdown-content">
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="404.html">404 Page</a></li>
-        </ul>
-      </li>
-      <li><a href="Dashboard.html">Dashboard</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li class="login-signup">
-        <a href="signin.html" class="btn signup">SIGN IN/UP</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+   <button class="menu-toggle">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <!-- <li><a href="404_1.html">Dashboard</a></li> -->
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="404_1.html">Contact</a></li>
+        <li><button class="btn-appointment" onclick="location.href='login.html'">Make Appointment</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr class="divider" />
+
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Services</h1>
+    <p><a href="index.html">Home</a> &gt; <span>Services</span></p>
+  </div>
+</section>
+
+<section class="ourservices-section" data-aos="fade-up" data-aos-delay="300">
+  <h5>Our Services</h5>
+  <h2>Service We Provide</h2>
+  <p>We provide a wide range of financial and accounting services tailored to meet your business needs.</p>
+
+  <div class="services-grid" data-aos="fade-up" data-aos-delay="500">
+  <div class="ourservice-card fixed">
+  <div class="icon">
+    <img src="Images1/icon1.png" class="icon-img single-icon" alt="Icon" />
+  </div>
+  <h3>Accounting</h3>
+  <p>We offer comprehensive accounting services to help you manage your finances efficiently and ensure compliance with all regulations.</p>
+  <a href="404_1.html">Learn More →</a>
+</div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="hover-bg"></div>
+    <div class="icon">
+    <img src="Images1/icon2.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new1.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Tax Consulting</h3>
+      <p>Our expert tax consulting services help you optimize your tax strategy, minimize liabilities, and stay compliant with current tax laws.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="700">
+  <div class="hover-bg"></div>
+  <div class="icon">
+    <img src="Images1/icon3.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new2.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+  <h3>Investment</h3>
+  <p>We provide strategic investment guidance to help you grow your wealth and achieve your long-term financial goals.</p>
+  <br>
+  <a href="404_1.html">Learn More →</a>
+</div>
 
 
-    <section class="hero" id="serviceHero">
-      <div class="overlay"></div>
-      <div class="hero-content" id="serviceHeroContent">
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="800">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon4.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new3.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Project Management</h3>
+      <p>We offer end-to-end project management solutions to ensure your initiatives are delivered on time, within budget, and to the highest quality standards.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="900">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon5.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new4.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Financial Planning</h3>
+      <p>Our financial planning services are designed to help you make informed decisions, manage risks, and secure your financial future.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="1000">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon6.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new5.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Data Entry</h3>
+      <p>We deliver accurate and efficient data entry services to help you maintain organized records and streamline business operations.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us">
+  <div class="content" data-aos="fade-right">
+    <h4>Why Choose Us</h4>
+    <h2>We Have 20 Years of<br>Experience in Financial Management</h2>
+    <p>We bring two decades of expertise in helping clients manage their finances with confidence.From budgeting and forecasting to investment planning and risk management, our team is committed to delivering reliable financial solutions tailored to your unique needs</p>
+    <button class="view-btn" onclick="location.href='404_1.html'">View Services</button>
+  </div>
+  <div class="images-and-features" data-aos="fade-left">
+    <div class="main-images">
+      <img src="Images1/service_choose.jpg" alt="Main Image" class="main-img" >
+      <img src="Images1/service_choose1.jpg" alt="Overlay Image" class="overlay-img" data-aos="fade-left" data-aos-delay="400">
+      <div class="experience-badge">
+        <span>🎖️</span> 20 Years Experienced
       </div>
-    </section>
-  </div>
-<section class="header-description-section">
-  <div class="text-container">
-    <h2 class="section-heading">
-      YOUR <span class="highlight">DAY-TO-DAY</span> ACCOUNTING
-    </h2>
-    <p class="section-description">
-      Objectively innovate empowered manufactured products whereas parallel platforms.
-      Holistically predominate extensible testing procedures for reliable supply chains.
-      Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-      Proactively envisioned multimedia based expertise and cross-media growth strategies.
-      Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.
-    </p>
+    </div>
+
+   <ul class="features-list" data-aos="fade-left" data-aos-delay="500">
+  <li><img src="Images1/tick-icon.png" alt="icon" class="feature-icon"> Best Analytics</li>
+  <li><img src="Images1/tick-icon.png" alt="icon" class="feature-icon"> Commitment to Client</li>
+  <li><img src="Images1/tick-icon.png" alt="icon" class="feature-icon"> Best Service You Can Get</li>
+  <li><img src="Images1/tick-icon.png" alt="icon" class="feature-icon"> High Level of Knowledge</li>
+</ul>
   </div>
 </section>
 
-
-<hr class="about-hr" />
-
-<section class="service-section white">
-  <div class="container split">
-    <div class="text" data-aos="fade-right">
-      <img src="Images/finance-icon.png" alt="Finance Icon" class="service-icon" />
-      <h2 class="section-title">Finance</h2>
-      <p>Finance
-Enable cost-effective sources and implement innovative methods for efficient solutions. Strengthen your organization’s financial infrastructure by adopting advanced budgeting tools and performance tracking systems. Empower decision-making with real-time financial data analysis, ensuring optimal allocation of resources and sustainable growth.</p>
-    </div>
-    <div class="image1" data-aos="fade-left">
-      <img src="Images/finance.png" alt="Finance">
-    </div>
-  </div>
-</section>
-
-<section class="service-section gray">
-  <div class="container split reverse">
-    <div class="text" data-aos="fade-left">
-      <img src="Images/accounting-icon.png" alt="Accounting Icon" class="service-icon" />
-      <h2 class="section-title">Accounting</h2>
-      <p>Deliver accurate, real-time financial data through effective accounting systems. Our comprehensive accounting services ensure transparency, regulatory compliance, and financial clarity for businesses of all sizes. By integrating advanced tools and automation, we streamline your bookkeeping, reporting, and auditing processes, reducing manual errors and saving valuable time.</p>
-    </div>
-    <div class="image1" data-aos="fade-right">
-      <img src="Images/accounting.png" alt="Accounting">
-    </div>
-  </div>
-</section>
-
-<section class="service-section white">
-  <div class="container split">
-    <div class="text" data-aos="fade-right">
-      <img src="Images/consulting-icon.png" alt="Consulting Icon" class="service-icon" />
-      <h2 class="section-title">Consulting</h2>
-      <p>Empower your business decisions with strategic and tailored financial consulting services. Our expert consultants work closely with you to understand your unique challenges and growth opportunities. Through in-depth analysis and data-driven insights, we help you optimize operations, manage financial risks, and enhance profitability.</p>
-    </div>
-    <div class="image1" data-aos="fade-left">
-      <img src="Images/consulting.png" alt="Consulting">
-    </div>
-  </div>
-</section>
-
-
-<section class="service-section gray">
-  <div class="container split reverse">
-    <div class="text" data-aos="fade-left">
-      <img src="Images/valuation-icon.png" alt="Valuation Icon" class="service-icon" />
-      <h2 class="section-title">Valuation</h2>
-      <p>Get reliable company or asset valuations with deep market insights and expertise. Our valuation services are designed to support critical business decisions, including mergers, acquisitions, financial reporting, and strategic planning. We apply industry-leading methodologies to provide objective, transparent, and defensible valuation reports.</p>
-    </div>
-    <div class="image1" data-aos="fade-right">
-      <img src="Images/Valuation.png" alt="Valuation">
-    </div>
-  </div>
-</section>
-
-
-<section class="service-section white">
-  <div class="container split">
-    <div class="text" data-aos="fade-right">
-      <img src="Images/taxes-icon.png" alt="Taxes Icon" class="service-icon" />
-      <h2 class="section-title">Taxes</h2>
-      <p>Ensure compliance and save costs with optimized tax planning and management solutions. Our expert team helps businesses and individuals navigate complex tax regulations while minimizing liabilities and identifying valuable deductions. We provide end-to-end tax advisory, preparation, and filing services tailored to your specific financial structure.</p>
-    </div>
-    <div class="image1" data-aos="fade-left">
-      <img src="Images/taxes.png" alt="Taxes">
-    </div>
-  </div>
-</section>
-
-
-<section class="service-section gray">
-  <div class="container split reverse">
-    <div class="text" data-aos="fade-left">
-      <img src="Images/transactions-icon.png" alt="Transactions Icon" class="service-icon" />
-      <h2 class="section-title">Transactions</h2>
-      <p>Support your M&A and investment deals with precise financial and strategic guidance. Leverage our expertise in structuring, valuation, and due diligence to make informed decisions with confidence.</p>
-    </div>
-    <div class="image1" data-aos="fade-right">
-      <img src="Images/transactions.png" alt="Transactions">
-    </div>
-  </div>
-</section>
-
-<section class="service-section white">
-  <div class="container split">
-    <div class="text" data-aos="fade-right">
-      <img src="Images/private-stock-icon.png" alt="Private Stock Icon" class="service-icon" />
-      <h2 class="section-title">Private Stock</h2>
-      <p>Strengthen equity control and transparency through efficient private stock management. We help you navigate ownership structures, maintain compliance, and enhance investor confidence for long-term success.</p>
-    </div>
-    <div class="image1" data-aos="fade-left">
-      <img src="Images/private-stock.png" alt="Private Stock">
-    </div>
-  </div>
-</section>
-
-<section class="info-wrapper">
-  <div class="info-boxes">
-    <div class="box">
-      <i class="fa-solid fa-clock"></i>
-      <p>MONDAY TO FRIDAY<br><span>09:00 - 20:00</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-location-dot"></i>
-      <p>PLACE,<br><span>STATE CITY COUNTRY</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-envelope"></i>
-      <p>E-MAIL:<br><span>INFO@YOURCOMPANY.COM</span></p>
-    </div>
-    <div class="box">
-      <i class="fa-solid fa-phone"></i>
-      <p>CALL US:<br><span>123456789</span></p>
-    </div>
-  </div>
-</section>
-
-
-<footer class="footer">
+<footer class="footer-section">
   <div class="footer-container">
-    <div class="footer-box about">
-      <div class="logo">
-        <img src="Images/Logo.png" alt="Logo" />
-      </div>
+    <div class="footer-column about">
+      <a class="logo-text1">Stackly</a>
       <p>
-        Efficiently enable enabled sources and cost effective products.
-        Completely synthesize principle-centered information after ethical
-        communities.
+        Empowering businesses with smart solutions your success is our priority.
       </p>
-      <div class="social-icons">
-      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
-        <a href=https://www.pinterest.com/business/login><i class="fa-brands fa-pinterest-p"></i></a>
+      <div class="footer-socials">
+        <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="404_1.html"><i class="fab fa-twitter"></i></a>
+        <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+        <a href="404_1.html"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
 
-    <div class="footer-box news">
-      <h3>RECENT NEWS</h3>
+    <div class="footer-column links">
+      <h4>Quick Links</h4>
       <ul>
-        <li>Front-end processes with effective convergence<br><span>3 days ago</span></li>
-        <li>User friendly intellectual capital<br><span>5 days ago</span></li>
-        <li>Innovate open-source infrastructures<br><span>1 month ago</span></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="404_1.html">Pricing</a></li>
+        <li><a href="404_1.html">Contact</a></li>
       </ul>
     </div>
 
-    <div class="footer-box links">
-      <h3>LINKS</h3>
-   <ul>
-  <li><a href="index.html">HOME</a></li>
-  <li><a href="service.html">SERVICES</a></li>
-  <li><a href="about.html">ABOUT</a></li>
-  <li><a href="blogs.html">BLOG</a></li>
-  <li><a href="contact.html">CONTACT</a></li>
-</ul>
+    <div class="footer-column links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="404_1.html">Privacy Policy</a></li>
+        <li><a href="404_1.html">Terms and Conditions</a></li>
+        <li><a href="404_1.html">Disclaimer</a></li>
+        <li><a href="404_1.html">Support</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
     </div>
 
-     <div class="footer-box newsletter">
-  <h3>NEWSLETTER</h3>
-  <p>Enter your e-mail and subscribe to our newsletter</p>
-
-  <form action="https://mail.google.com/" method="get" target="_blank">
-    <input type="email" placeholder="E-mail" required>
-    <button type="submit">SUBSCRIBE</button>
-  </form>
-</div>
+    <div class="footer-column newsletter">
+      <h4>Newsletter</h4>
+      <ul class="contact-info">
+        <li><i class="fas fa-map-marker-alt"></i> state country</li>
+        <li><i class="fas fa-envelope"></i> stackly@thestackly.com</li>
+        <li><i class="fas fa-phone-alt"></i> 123456789 </li>
+      </ul>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit" onclick="location.href='404_1.html'"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright Yourcompany Inc. All Rights Reserved.</p>
+    <p>Copyright © Stackly 2025. All rights reserved.</p>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 1000,
-    once: true
+    once: true     
   });
+
+  const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    let count = +counter.innerText;
+    const increment = Math.ceil(target / 100);
+
+    if (count < target) {
+      counter.innerText = Math.min(count + increment, target);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
 </script>
 
+<script src="script.js"></script>
 </body>
 </html>
